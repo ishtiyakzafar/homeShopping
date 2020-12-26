@@ -11,16 +11,15 @@ const SingleItem = ({ currentItem, addToCart }) => {
           <div className="col-md-6 SingleItem_img">
             <img
               src={currentItem.image}
-              alt="..."
+              alt={currentItem.title}
               className="rounded img-fluid"
             />
           </div>
           <div className="col-md-6 SingleItem_detail d-flex align-items-center">
             <div className="card-body">
-              <h5 className="card-title">Large Coffee Cup</h5>
-              <p className="card-text">
-                Get a big cup of coffee every morning before the day starts.
-              </p>
+              <h5 className="card-title">{currentItem.title}</h5>
+              <p className="card-text">{currentItem.description}</p>
+              <h6 className="">₹ {currentItem.price}</h6>
               <button
                 onClick={() => addToCart(currentItem.id)}
                 className=" btn btn-outline-success"

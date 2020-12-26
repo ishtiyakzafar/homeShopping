@@ -25,7 +25,7 @@ const CartSummary = ({ cart }) => {
           <div className="card-body">
             <h5 className="card-title">
               TOTAL : ({totalItem} items)
-              <br />$ {totalPrice}
+              <br />₹ {totalPrice}
             </h5>
             <button className=" btn btn-outline-success">
               proceed to checkout

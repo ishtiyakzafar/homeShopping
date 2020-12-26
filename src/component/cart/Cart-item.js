@@ -24,22 +24,27 @@ const CartItem = ({ item, removeFromCart, adjtQty }) => {
               <h5 className="card-title">{item.title}</h5>
               <p className="card-text">{item.description}</p>
               <h6 className="">₹ {item.price}</h6>
-              <button
-                onClick={() => removeFromCart(item.id)}
-                className=" btn btn-outline-success"
-              >
-                Remove from cart
-              </button>
-              {/* <span className='ml-5'> Qty </span> */}
-              <input
-                className="adjustQty"
-                onChange={onChangeHandler}
-                type="number"
-                name=""
-                value={input}
-                min="1"
-                max="5"
-              />
+
+              <div className="d-flex justify-content-around ">
+                <button
+                  onClick={() => removeFromCart(item.id)}
+                  className=" btn btn-outline-success"
+                >
+                  Remove from cart
+                </button>
+                <div>
+                  <span className="ml-5"> Qty </span>
+                  <input
+                    className="adjustQty"
+                    onChange={onChangeHandler}
+                    type="number"
+                    name=""
+                    value={input}
+                    min="1"
+                    max="5"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
